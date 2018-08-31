@@ -1,0 +1,58 @@
+Opis fajlova:
+
+.htaccess radi sledeće:
+
+	- proverava da li je mod_rewrite modul uključen u apache2
+	(uglavnom jeste) ako nije mora administrator da ga uključi
+
+	- sav sadržaj sa http šalje na https, tako da je uključena sigurnost
+
+	- preskače foldere i fajlove sa imenima istim kao što su URL varijable, tako da url varijabla ne sme da bude ime foldera ili fajla
+
+	- sav saobraćaj šalje na index.php u korenom folderu
+	
+	- sav saobraćaj ubacuje u varijablu $path, posle funkcija u 'config.php' fajlu parsira taj URI (URI ne URL)
+
+config.php
+
+	- sadrži osnovna podešavanja, za bazu i promenljive
+	- default podešavanja
+	- kao i funkciju 'Vars()' koja uzima $_GET podatke
+
+	napomena: tokom razvoja sajta, moguće je da će se config.php malo menjati
+	nedoumica: Da li meta podatke staviti u config ili u meta.php ili u bazu. Mislim ono 'description', 'charset', 'author', 'keywords'
+
+	Lično mišljenje mi je da u bazi napravim tri odeljka za ćirilicu latinicu i engleski i tu strpam te podatke.
+
+	Takođe, nameravam da php varijable koristim i u bazi direktno sa eval() funkcijom. Takođe nameravam da skratim putanje, kada hoće neko da ubaci sliku, da ne mora da stavlja: https://fabrikana.com/content/img/slika.png nego samo '$img/slika.png'
+	To rešavamo ovako:
+
+	// Images for site
+	define ('IMAGES', ROOT.'content/img/');
+
+	i još + važan dodatak
+
+	u posebnim fajlovima za blog, arhivu, kategorije, sve oni fajlovi koji barataju sa sadrzajem kroz eval() provući sadržaj i 
+	zameniti 'IMAGES' sa '$img' jer baza ne može 'IMAGES' da shvati kao promenljivu, već kao običan tekst.
+
+index.php
+
+	- sve ide preko ovog fajla. Pomoću klasa i funkcija-metoda, ubacujemo sadržaj koji nam treba. Čak sam mišljenja da nam ne treba klasični instalacioni folder, napraviću dobru dokumentaciju za config.php i sve će moći tu da se menja. Tu i u bazi ali to će biti admin deo
+
+	- Svaki fajl koji postoji na sajtu, osim izuzetaka i dodataka moraće da sadrže na početku fajla, zaštitu:
+		
+		// Protection
+		if (!defined('ENTER')){die('Denied access!');}
+
+	- Init() podešava sesiju
+	- Start() proverava vrstu korisnika, čita kolačić ako ga ima i dodeljuje privilegije korisniku, ako je gost onda default parametre, ako je neka vrsta člana onda se podaci čitaju iz baze.
+
+	- Decode ima opciju kompresije fajlova, tj. HTML izlaza
+	- Osim toga Deecode vrši preslovljavanje sa ćir na lat (obrnuto ne može)
+	- I u Decode stavljamo neke promenljive koje se provlače kroz sajt
+	- Tačnije pripremamo sadržaj
+
+	- Output daje izlaz i ispisuje u browser
+
+----------------- toliko za sada ----------------------
+
