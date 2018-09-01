@@ -7,12 +7,12 @@ class Content {
 	
 	public function __construct() {
 
-		require_once 'look/temp/index.php';
+		require_once 'public/temp/index.php';
 	}
 
 	static public function Body() {
 
-		return '<h1>Ја сам садржај!!!</h1>';
+		return self::Footer();
 	}
 
 	static private function Menu() {
@@ -28,7 +28,18 @@ class Content {
 	}
 
 	static private function Footer() {
-	
+		
+		if (LANG === 'en') {
+
+			require 'lang/en.php';
+		} else if (LANG === 'cir' OR LANG === 'lat') {
+
+			require 'lang/sr.php';
+		}
+
+		require_once 'public/temp/footer.php';
+
+		return $footer;
 	}
 }
 
