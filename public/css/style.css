@@ -1,1 +1,22 @@
 
+@font-face {
+    font-family: Arsenal;
+    src: url(../../public/fonts/arsenal/Arsenal-Regular.otf);
+}
+@font-face {
+    font-family: Arsenal;
+    src: url(../../public/fonts/arsenal/Arsenal-Bold.otf);
+    font-weight: bold;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arsenal;
+	color: #999;
+}
+
+#footer {
+	margin: 20px auto;
+	text-align: center;
+}
