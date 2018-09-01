@@ -15,7 +15,6 @@ class Content {
 		$body = self::Menu().self::Main().self::Right().self::Footer();
 		
 		return $body;
-	
 	}
 
 	static private function Menu() {
