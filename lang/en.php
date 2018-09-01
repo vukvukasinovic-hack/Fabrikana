@@ -17,3 +17,5 @@ $c = array(
 	'lat'			=> 'Latin',
 	'fabrikana'		=> 'Fabrikana'
 );
+
+?>
