@@ -15,7 +15,17 @@ $c = array(
 	'en'			=> 'English',
 	'cir'			=> 'Cyrillic',
 	'lat'			=> 'Latin',
-	'fabrikana'		=> 'Fabrikana'
+	'fabrikana'		=> 'Fabrikana',
+	'archive'		=> 'Archive',
+	'categories'		=> 'Categories',
+	'members'		=> 'Members',
+	'bnew'			=> 'Latest',
+	'bold'			=> 'Oldest',
+	'blike'			=> 'On likes',
+	'bcomment'		=> 'On comments',
+	'mnew'			=> 'Latest',
+	'mold'			=> 'Oldest',
+	'mstatus'		=> 'On status'
 );
 
 ?>
