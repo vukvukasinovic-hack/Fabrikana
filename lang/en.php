@@ -25,7 +25,23 @@ $c = array(
 	'bcomment'		=> 'On comments',
 	'mnew'			=> 'Latest',
 	'mold'			=> 'Oldest',
-	'mstatus'		=> 'On status'
+	'mstatus'		=> 'On status',
+	'bview'			=> 'On views'
+);
+
+$e = array(
+
+	'welcome'		=> 'Welcome!',
+	'signin'		=> 'Sign In',
+	'signup'		=> 'Sign Up',
+	'forgot'		=> 'You forgot data?',
+	'view'			=> 'Order by views',
+	'new'			=> 'Latest',
+	'old'			=> 'Oldest',
+	'like'			=> 'Order by likes',
+	'comment'		=> 'Order by comments',
+	'categories'		=> 'Categories',
+	'archive'		=> 'Archive'
 );
 
 ?>
