@@ -15,7 +15,18 @@ $menu = "
                 <a href='".ROOT.LANG.'/forgot'."'>$c[forgot]</a>
             </div>
         </li>
-        <li><a href='".ROOT.LANG.'/blog'."'>$c[blog]</a></li>
+        <li class='dropdown'>
+            <a href='javascript:void(0)' class='dropbtn'>$c[blog]</a>
+            <div class='dropdown-content'>
+                <a href='".ROOT.LANG.'/new'."'>$c[bnew]</a>
+                <a href='".ROOT.LANG.'/old'."'>$c[bold]</a>
+                <a href='".ROOT.LANG.'/like'."'>$c[blike]</a>
+                <a href='".ROOT.LANG.'/comment'."'>$c[bcomment]</a>
+            </div>
+        </li>
+        <li><a href='".ROOT.LANG.'/categories'."'>$c[categories]</a></li>
+        <li><a href='".ROOT.LANG.'/archive'."'>$c[archive]</a></li>
+        <li><a href='#' class='not-active'>$c[members]</a></li>
         <li class='dropdown'>
             <a href='javascript:void(0)' class='dropbtn'>$c[lang]</a>
             <div class='dropdown-content'>
