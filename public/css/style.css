@@ -26,13 +26,14 @@ body {
 #menu {
     margin: auto;
     text-align: left;
+    border-bottom: 1px solid orange;
 }
 #menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #eee;
+    background-color: #f9f9f9;
 }
 #menu li {
     display: inline-block;
@@ -45,7 +46,8 @@ body {
     text-decoration: none;
 }
 #menu li a:hover, #menu .dropdown:hover .dropbtn {
-    background-color: #ddd;
+    background-color: #f1f1f1;
+    color: orange;
 }
 #menu li.dropdown {
     display: inline-block;
@@ -78,6 +80,10 @@ body {
     color: #ccc;
 }
 
+#main {
+	margin: 20px auto 20px auto;
+	max-width: 1200px;
+}
 @media screen and (max-width: 800px) {
 
     #menu {
