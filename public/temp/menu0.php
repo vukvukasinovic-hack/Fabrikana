@@ -18,6 +18,7 @@ $menu = "
         <li class='dropdown'>
             <a href='javascript:void(0)' class='dropbtn'>$c[blog]</a>
             <div class='dropdown-content'>
+                <a href='".ROOT.LANG.'/view'."'>$c[bview]</a>
                 <a href='".ROOT.LANG.'/new'."'>$c[bnew]</a>
                 <a href='".ROOT.LANG.'/old'."'>$c[bold]</a>
                 <a href='".ROOT.LANG.'/like'."'>$c[blike]</a>
