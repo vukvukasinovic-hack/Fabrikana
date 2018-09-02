@@ -23,7 +23,10 @@ body {
 	margin: 20px auto;
 	text-align: center;
 }
-
+#menu {
+    margin: auto;
+    text-align: left;
+}
 #menu ul {
     list-style-type: none;
     margin: 0;
@@ -32,7 +35,7 @@ body {
     background-color: #eee;
 }
 #menu li {
-    float: left;
+    display: inline-block;
 }
 #menu li a, #menu .dropbtn {
     display: inline-block;
@@ -67,4 +70,27 @@ body {
 }
 #menu .dropdown:hover .dropdown-content {
     display: block;
+}
+#menu li a.not-active {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    color: #ccc;
+}
+
+@media screen and (max-width: 800px) {
+
+    #menu {
+        text-align: center;
+    }
+    #menu .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        left: 0;
+        width: 100%;
+        min-width: 90%;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
 }
