@@ -55,6 +55,50 @@ class Content {
 
 	static private function Main() {
 		
+		if (LANG === 'en') {
+
+			require 'lang/en.php';
+		} else if (LANG === 'cir' OR LANG === 'lat') {
+
+			require 'lang/sr.php';
+		}
+
+		if (C1 === HOMEPAGE) {
+
+			require_once 'public/content/homepage.php';
+		} else if (C1 === 'signin') {
+
+			require_once 'public/content/signin.php';
+		} else if (C1 === 'signup') {
+
+			require_once 'public/content/signup.php';
+		} else if (C1 === 'forgot') {
+
+			require_once 'public/content/forgot.php';
+		} else if (C1 === 'view') {
+
+			require_once 'public/content/view.php';
+		} else if (C1 === 'new') {
+
+			require_once 'public/content/new.php';
+		} else if (C1 === 'old') {
+
+			require_once 'public/content/old.php';
+		} else if (C1 === 'like') {
+
+			require_once 'public/content/like.php';
+		} else if (C1 === 'comment') {
+
+			require_once 'public/content/comment.php';
+		} else if (C1 === 'categories') {
+
+			require_once 'public/content/categories.php';
+		} else if (C1 === 'archive') {
+
+			require_once 'public/content/archive.php';
+		}
+
+		return $main;
 	}
 
 	static private function Right() {
