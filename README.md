@@ -9,3 +9,5 @@ krećemo
 - Takođe je navigacija responsivna
 - Polje 'Members' je disejblovano
 - Rade svi linkovi - vode na svoje stranice, koje još nisu kompletne, osim naslova
+
+### PROJEKAT TRENUTNO OBUSTAVLJEN ###
