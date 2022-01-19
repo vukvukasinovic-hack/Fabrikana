@@ -13,16 +13,13 @@ define ('DATABASE', 'cms-fabrikana');
 define ('URL', 'https://fabrikana.com/');
 
 // Address for internal links (folder on server) if root folder then / if subfolder then /folder/
-define ('ROOT', '/CMS-Fabrikana-0.2/');
-
-// Images for site
-define ('IMAGES', ROOT.'content/img/');
+define ('ROOT', '/Fabrikana/');
 
 // Favicon
 define ('FAVICON', ROOT.'favicon.png');
 
 // CSS Style
-define ('STYLE', ROOT.'look/css/style.css');
+define ('STYLE', ROOT.'public/css/style.css');
 
 // Name of cookie for sessions and cookies
 define ('SITE', 'cmsfabrikana');
